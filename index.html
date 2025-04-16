@@ -2,35 +2,149 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
-  <title>Phaveeraya's Journey</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ภาวรญา - เว็บไซต์ส่วนตัว</title>
+  <!-- FontAwesome CSS for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
-    body { margin:0; font-family: 'TH Sarabun New', sans-serif; background:#FAF9F6; color:#1A374D; }
-    header { background:#5C4033; padding:20px; text-align:center; color:#FAF9F6; }
-    nav { background:#D4AF37; padding:10px; text-align:center; }
-    nav a { color:#1A374D; margin:0 15px; text-decoration:none; font-size:18px; }
-    .hero { background:url('images/hero.jpg') center/cover no-repeat; height:400px; display:flex; align-items:center; justify-content:center; color:#FAF9F6; text-shadow:1px 1px #5C4033; font-size:40px; }
-    .content { padding:40px; text-align:center; }
-    .content h2 { color:#5C4033; font-size:32px; }
-    .content p { font-size:20px; max-width:700px; margin:20px auto; }
-    .btn { background:#D4AF37; color:#1A374D; padding:10px 25px; text-decoration:none; border-radius:5px; font-size:18px; margin:10px; display:inline-block; }
+    /* General Styles and Color Scheme */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #FAF9F6; /* พื้นหลังสีครีมอ่อน */
+      color: #1A374D; /* ข้อความสีกรมท่าเข้ม */
+    }
+    header {
+      background-color: #5C4033; /* พื้นหลังส่วนหัวสีน้ำตาลเข้ม */
+      padding: 10px 20px;
+    }
+    header nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    header nav a {
+      color: #FFFFFF; /* ข้อความสีขาวบนเมนู */
+      text-decoration: none;
+      margin: 5px 15px;
+      font-weight: bold;
+    }
+    header nav a:hover {
+      color: #D4AF37; /* เปลี่ยนเป็นสีทองเมื่อชี้เมาส์ */
+    }
+    /* Hero Section with background image */
+    .hero {
+      position: relative;
+      background: url('hero.jpg') no-repeat center center;
+      background-size: cover;
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #FFFFFF;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.3); /* เลเยอร์โปร่งดำเพื่อความชัดของข้อความ */
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;  /* ทำให้ข้อความอยู่เหนือเลเยอร์มืด */
+    }
+    .hero h1 {
+      font-size: 2.5em;
+      margin: 0.2em 0;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    .hero p {
+      font-size: 1.2em;
+      margin: 0.2em 0;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    /* Introduction text section */
+    .intro {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .intro p {
+      font-size: 1.1em;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+    /* Navigation buttons below intro text */
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+    .buttons a {
+      display: inline-block;
+      padding: 12px 25px;
+      text-decoration: none;
+      font-size: 1em;
+      border-radius: 5px;
+      font-weight: bold;
+      color: #FFFFFF;
+      background-color: #1A374D; /* พื้นหลังปุ่มสีน้ำเงินกรมท่า */
+    }
+    .buttons a:hover {
+      background-color: #D4AF37; /* พื้นหลังปุ่มสีทองเมื่อ hover */
+      color: #1A374D; /* ข้อความสีกรมท่าเมื่อปุ่มเป็นสีทอง */
+    }
+    /* Footer styles */
+    footer {
+      background-color: #5C4033; /* พื้นหลังส่วนท้ายสีน้ำตาลเข้ม */
+      text-align: center;
+      padding: 20px;
+    }
+    footer a {
+      color: #FAF9F6; /* สีไอคอน (ครีมอ่อน) */
+      text-decoration: none;
+      font-size: 1.5em;
+    }
+    footer a:hover {
+      color: #D4AF37; /* สีไอคอนเปลี่ยนเป็นทองเมื่อ hover */
+    }
   </style>
 </head>
 <body>
-  <header><h1>Phaveeraya’s Journey</h1></header>
-  <nav>
-    <a href="index.html">หน้าแรก</a>
-    <a href="about.html">เกี่ยวกับฉัน</a>
-    <a href="certificates.html">Certificates</a>
-    <a href="artworks.html">My Artworks</a>
-    <a href="contact.html">ติดต่อ</a>
-  </nav>
-  <div class="hero">ยินดีต้อนรับสู่โลกของภาวีรญา</div>
-  <div class="content">
-    <h2>เส้นทางแห่งแรงบันดาลใจ</h2>
-    <p>ค้นพบตัวตน แรงบันดาลใจ และเรื่องราวดีๆ ที่จะทำให้ทุกวันของคุณมีความหมาย พร้อมพลังบวก ศิลปะ วัฒนธรรม และปรัชญาชีวิต ที่คุณสัมผัสได้</p>
-    <a href="about.html" class="btn">เกี่ยวกับฉัน</a>
-    <a href="certificates.html" class="btn">Certificates</a>
-    <a href="artworks.html" class="btn">My Artworks</a>
-  </div>
+
+  <header>
+    <nav>
+      หน้าหลัก
+      เกี่ยวกับฉัน
+      บทความ
+      ผลงาน
+      ติดต่อ
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>ยินดีต้อนรับสู่โลกของภาวรญา</h1>
+      <p>เส้นทางแห่งแรงบันดาลใจ ศิลปะ ค้นตนตนศรัทธา</p >
+    </div>
+  </section>
+
+  <section class="intro">
+    <p>ค้นพบตัวตน แรงบันดาลใจ และเรื่องราวดี ๆ ที่จะทำให้ทุกวันของคุณมีความหมาย พร้อมพลังบวก ศิลปะ วัฒนธรรม และปรัชญาชีวิต ที่คุณลืมหลง</p >
+    <div class="buttons">
+      เกี่ยวกับฉัน
+      บทความล่าสุด
+      ติดต่อ
+    </div>
+  </section>
+
+  <footer>
+    <!-- Facebook icon link (FontAwesome) -->
+    <a href="https://www.facebook.com/adminArt99?mibextid=wwXIfr" target="_blank" aria-label="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a >
+  </footer>
+
 </body>
 </html>
