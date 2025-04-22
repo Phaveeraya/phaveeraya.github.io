@@ -1,87 +1,41 @@
+
 <!DOCTYPE html>
 <html lang="th">
 <head>
     <meta charset="UTF-8">
     <title>Phaveeraya Art Studio</title>
     <style>
-        body {
-            font-family: 'Sarabun', sans-serif;
-            background-color: #fffdf8;
-            color: #3e2f1c;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #e8d8c3;
-            color: #5a3e2b;
-            text-align: center;
-            padding: 30px 10px 20px 10px;
-        }
-        nav {
-            background-color: #d4bfa7;
-            text-align: center;
-            padding: 10px 0;
-        }
+        body { font-family: 'Arial', sans-serif; background: #fefdf8; color: #4b3a2f; text-align: center; margin: 0; }
+        header { padding: 30px; background-color: #f1eae0; }
         nav a {
-            color: #3e2f1c;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
+            margin: 0 15px; color: #5a3e36; text-decoration: none; font-weight: bold;
         }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        main {
-            max-width: 960px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #fffaf3;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            text-align: center;
-        }
-        img {
-            max-width: 200px;
-            margin: 20px auto;
-            display: block;
-        }
-        footer {
-            background-color: #d4bfa7;
-            color: #3e2f1c;
-            text-align: center;
-            padding: 15px;
-            margin-top: 40px;
+        nav a:hover { text-decoration: underline; }
+        img.logo { max-width: 180px; margin-top: 10px; }
+        .content { padding: 40px 20px; }
+        .home-image {
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Phaveeraya Art Studio Logo">
+        <img src="logo.png" class="logo" alt="Phaveeraya Art Studio Logo">
         <h1>Phaveeraya Art Studio</h1>
-        <p>Hand-drawn Zentangle Art & Mandala by Phaveeraya</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
     </header>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Gallery</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-    </nav>
-    <main>
-        <h2>ยินดีต้อนรับสู่ Phaveeraya Art Studio</h2>
-        <p>ศิลปะ แรงบันดาลใจ และความสมดุลของจิต</p>
-        <p>พื้นที่สำหรับการเรียนรู้และเติบโตสำหรับทุกเพศทุกวัย<br>
-        กิจกรรมศิลปะเชิงบำบัดที่ได้รับแรงบันดาลใจจากธรรมชาติรอบตัว</p>
-
-        <img src="phaveeraya_portrait.jpeg" alt="Phaveeraya Portrait">
-
-        <h3>พบกับ ภาวีรญา ภุชรุ่งเรืองกุล</h3>
-        <p>ผู้ก่อตั้ง Phaveeraya Art Studio<br>
-        ศิลปินผู้เชื่อมั่นในพลังของเส้นสายแห่งศิลปะที่สามารถเยียวยาจิตใจ<br>
-        ศิลปะที่เธอสร้างขึ้นผสมผสานความรู้สึก ความสมดุล และพลังบำบัดจากธรรมชาติ<br>
-        เธออุทิศตนเพื่อเผยแพร่ศาสตร์แห่งการวาดลายละเอียดให้เป็นแสงสว่างในใจของผู้คน</p>
-    </main>
-    <footer>
-        ติดต่อ: pphaveeraya@gmail.com
-    </footer>
+    <div class="content">
+        <h2>ยินดีต้อนรับสู่สตูดิโอของฉัน</h2>
+        <p>แหล่งรวมผลงานศิลปะ Hand-drawn Zentangle และ Mandala ที่เปี่ยมด้วยความรู้สึกและความสมดุลทางจิตใจ</p>
+        <img src="home-image.jpg" alt="Phaveeraya at Art Studio" class="home-image">
+    </div>
 </body>
 </html>
