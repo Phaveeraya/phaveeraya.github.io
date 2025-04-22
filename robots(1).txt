@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://phaveeraya.github.io/sitemap.xml
